@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task8</title>
+</head>
+
+<body>
+    Дан массив чисел. определить сколько раз менялся знак в последовательности
+    <script>
+        'use strict';
+        
+        function countSign(arr) {
+
+	        let calc = 0;
+            let i;
+
+	        for (i = 0; i < arr.length; i++) {
+		        const n = i++;
+		        if (Math.sign(arr[i]) != Math.sign(arr[n])) {
+			        calc++;
+		        }
+	        }
+	        console.log(calc);
+        }   
+        countSign([6,8,-3,7,-9,7,-5,]);
+    </script>
+</body>
+
+</html>

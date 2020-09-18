@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task10</title>
+</head>
+
+<body>
+    Дан массив букв. определить упорядочена ли последовательность
+    <script>
+        'use strict';
+
+        function isOrder(arr) {
+	        let answer = true;
+            let i
+        
+	        const notSort = arr.concat();
+	        const sortArr = arr.sort((a, b) => a - b);
+	        for (i = 0; i < arr.length; i++) {
+		        if (notSort[i] != sortArr[i]) {
+			    answer = false;
+		    }
+	    }
+	    console.log(answer);
+    }
+    isOrder(['a','b','c']);
+    
+    </script>
+</body>
+
+</html>

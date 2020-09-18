@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task15</title>
+</head>
+
+<body>
+    Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'
+    <script>
+        'use strict';
+
+        function changeStr(str) {
+            let strNew = str.split('_');
+            for (let i = 1; i < strNew.length; i++) {
+                let letter = strNew[i][0].toUpperCase();
+
+                for (let b = 1; b < strNew[i].length; b++) {
+                    letter += strNew[i][b];
+                }
+                strNew[i] = letter;
+            }
+            str = "";
+            for (let i = 0; i < strNew.length; i++) {
+                str += strNew[i];
+            }   
+            return str;
+        }
+
+    console.log(changeStr("var_text_hello"));
+
+    </script>
+</body>
+
+</html>

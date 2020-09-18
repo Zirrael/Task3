@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task2</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        
+        let now = new Date(2020,27, 8, 17, 15, 59);
+        let date = new Date(1988, 14, 6, 12, 20, 59);
+        let diff = now - date;
+        
+
+        function daysGone() {
+          let days= Math.floor(diff / (1000 * 60 * 60 * 24))
+          return days
+        }
+        console.log(daysGone());
+       
+    </script>
+</body>
+
+</html>

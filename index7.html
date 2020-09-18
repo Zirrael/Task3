@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task7</title>
+</head>
+
+<body>
+    Дано число. вычислить сумму n последних цифр числа m
+    <script>
+        'use strict';
+        function sumLastNum(m, n) {
+
+	        const num = String(m).split("").map(Number);
+
+	        const sum = num.reduce(function (sum, item, index) {
+		        if (index >= num.length - n) {
+			    sum += item;
+		    }
+		    return sum;
+	        }, 0);
+            
+	        console.log(sum);
+        }
+        sumLastNum(1567,7)
+    </script>
+</body>
+
+</html>

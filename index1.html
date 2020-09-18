@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task1</title>
+</head>
+
+<body>
+    Дано число. написать функцию, которая считает факториал числа.
+    <!-- <script>
+        alert(factorial(6));
+        function factorial(n) {
+            result = n;
+            for (let i = n - 1; i > 1; --i) {
+                result *= i;
+            }
+            return result;
+        }
+    </script> -->
+    <script>
+        'use strict';
+        
+        function fact(n) {
+          return (n != 1) ? n * fact(n - 1) : 1;
+        }
+        
+        alert( fact(6) );
+    </script>
+</body>
+
+</html>

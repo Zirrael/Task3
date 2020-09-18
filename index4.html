@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task4</title>
+</head>
+
+<body>
+    Даны две строки. написать функцию, которая проверяет, являются ли строки анаграммами (регистр букв не имеет значения).
+    <script>
+        'use strict';
+        
+
+    function buildCharObject(str) {
+        const charObj = {};
+        str = str.toLowerCase().replace(/[^\w]/g);
+        for (let char of str) {
+        charObj[char] = charObj[char] + 1 || 1;
+        }
+  
+        return charObj;
+    }
+
+    function anagram(strA, strB) {
+        const aCharObj = buildCharObject(strA);
+        const bCharObj = buildCharObject(strB);
+  
+        if (Object.keys(aCharObj).length !== Object.keys(bCharObj).length) {
+        return false;
+        }
+  
+        for (let char in aCharObj) {
+        if (aCharObj[char] !== bCharObj[char]) {
+            return false;
+            }
+        }
+        return true;
+    }
+    console.log(anagram('state', 'taste'))
+       
+    </script>
+</body>
+
+</html>

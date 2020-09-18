@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tas14</title>
+</head>
+
+<body>
+    Найдите все года от 1 до 2020, сумма цифр которых равна 13.
+    <script>
+        'use strict';
+
+        function getDigits(num) {
+            return String(num).split("");
+        }
+
+
+        function getDigitsSum(num) {
+            let sum = 0;
+            for (let i = 0; i < num.length; i++) { 
+            sum += +num[i];
+            }
+
+            return sum;
+        }
+
+        function summa(n) {
+            return getDigitsSum(getDigits(n));
+        }
+
+        let arrYear = [];
+
+        function yearSum() {
+            for (let i = 1; i <= 2020; i++) { 
+
+                if (summa(i) == 13) { 
+                arrYear.push(i);
+                }
+            }
+            return arrYear;
+        }
+        console.log(yearSum());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task11</title>
+</head>
+
+<body>
+	Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+    <script>
+        'use strict';
+        
+        function notReverse(arr) {
+	        const revarr = [];
+
+	        for (let i = arr.length - 1; i >= 0; i--) {
+		        revarr.push(arr[i]);
+	        }
+	        return revarr;
+        }
+        console.log(notReverse([1,2,3]));
+
+    </script>
+</body>
+
+</html>
