@@ -2,21 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Task2</title>
+	<title>Task5</title>
 </head>
 
 <body>
+  Даны две даты. написать функцию, которая определяет сколько дней прошло между ними.
     <script>
         'use strict';
         
-        let now = new Date(2020,27, 8, 17, 15, 59);
-        let date = new Date(1988, 14, 6, 12, 20, 59);
+        let now = new Date(2020, 27, 8);
+        let date = new Date(1988, 14, 6);
         let diff = now - date;
         
 
         function daysGone() {
-          let days= Math.floor(diff / (1000 * 60 * 60 * 24))
-          return days
+          
+          if (new Date(now) == 'Invalid Date' || new Date(date) == 'Invalid Date') {
+		        console.log("Введите дату в формате 'YYYY-MM-DD'");
+          }
+          else if(now <= date) {
+            console.log("Введите более свежую дату");
+          }
+          else{
+            let days= Math.floor(diff / (1000 * 60 * 60 * 24))
+            return days
+          }
         }
         console.log(daysGone());
        

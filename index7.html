@@ -10,19 +10,24 @@
     <script>
         'use strict';
         function sumLastNum(m, n) {
-
-	        const num = String(m).split("").map(Number);
-
-	        const sum = num.reduce(function (sum, item, index) {
-		        if (index >= num.length - n) {
-			    sum += item;
-		    }
-		    return sum;
-	        }, 0);
-            
-	        console.log(sum);
+	
+			if (String(m).length <= n) {
+				console.log("Слишком короткое m");
+			}
+			else {
+				const num = String(m).split("").map(Number);
+				
+	        	const sum = num.reduce(function (sum, item, index) {
+		        	if (index >= num.length - n) {
+			    	sum += item;
+		    		}
+		    	return sum;
+	        	}, 0);
+				console.log(sum);
+			}
+	        
         }
-        sumLastNum(1567,7)
+        sumLastNum(15672323232,9) //сделать проверку что количество цифр в м больше числа н
     </script>
 </body>
 
